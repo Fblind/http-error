@@ -1,0 +1,14 @@
+{
+  "name": "http-error",
+  "version": "1.0.0",
+  "description": "Custom error to represent http error for node apps",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "http",
+    "error",
+    "node"
+  ],
+  "author": "Facundo Soria Guerrero (fblind@gmail.com)",
+  "license": "ISC"
+}
