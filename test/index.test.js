@@ -41,6 +41,19 @@ describe('HttpError', () => {
     expect(error.status).to.equal(404)
   })
 
+  it('should throw an error with code, message and statusCode', () => {
+    try {
+      throw sut()
+    } catch (err) {
+      expect(err).to.deep.include({
+        name: 'HttpError',
+        code: 'WRONG',
+        message: 'Error description message',
+        status: 404
+      })
+    }
+  })
+
   describe('defaults', () => {
     beforeEach(() => {
       code = undefined
