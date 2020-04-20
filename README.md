@@ -4,6 +4,11 @@
 
 This module expose an error to be fired for http projects
 
+## Install
+``` bash
+$ npm install http-error
+```
+
 ## Error properties
 - **code**: Represents an internal error code, defaults into an empty string
 - **message**: Represents a human-readable message explaining the situation, defaults into an empty string
