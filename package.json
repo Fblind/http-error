@@ -11,7 +11,8 @@
   "keywords": [
     "http",
     "error",
-    "node"
+    "node",
+    "express"
   ],
   "author": "Facundo Soria Guerrero (fblind@gmail.com)",
   "license": "ISC",
