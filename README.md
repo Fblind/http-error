@@ -19,14 +19,14 @@ $ npm install http-error
 const HttpError = require('http-error')
 
 throw new HttpError()
-// you will get: code = '', message = '', statusCode = 400
+// you will get: code = '', message = '', status = 400
 
 throw new HttpError('PRODUCT_NOT_EXISTS')
-// you will get: code = 'PRODUCT_NOT_EXISTS', message = '', statusCode = 400
+// you will get: code = 'PRODUCT_NOT_EXISTS', message = '', status = 400
 
 throw new HttpError('PRODUCT_NOT_EXISTS', 'The product you are trying to see does not exists')
-// you will get: code = 'PRODUCT_NOT_EXISTS', message = 'The product you are trying to see does not exists', statusCode = 400
+// you will get: code = 'PRODUCT_NOT_EXISTS', message = 'The product you are trying to see does not exists', status = 400
 
 throw new HttpError('PRODUCT_NOT_EXISTS', 'The product you are trying to see does not exists', 404)
-// you will get: code = 'PRODUCT_NOT_EXISTS', message = 'The product you are trying to see does not exists', statusCode = 404
+// you will get: code = 'PRODUCT_NOT_EXISTS', message = 'The product you are trying to see does not exists', status = 404
 ```
