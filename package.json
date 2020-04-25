@@ -1,6 +1,6 @@
 {
   "name": "fblind-http-error",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Custom error to represent http error for node apps",
   "main": "index.js",
   "scripts": {
