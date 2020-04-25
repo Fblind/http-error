@@ -1,8 +1,10 @@
 # HTTP Error
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![CircleCI](https://img.shields.io/circleci/build/github/Fblind/http-error)
 
-This module expose an error to be fired for http projects
+
+This module expose an error to be thrown for http projects
 
 ## Install
 ``` bash
