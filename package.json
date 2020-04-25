@@ -1,6 +1,6 @@
 {
   "name": "http-error",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Custom error to represent http error for node apps",
   "main": "index.js",
   "scripts": {
