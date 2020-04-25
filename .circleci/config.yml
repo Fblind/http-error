@@ -1,0 +1,40 @@
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:12.14.0
+
+jobs:
+  build-and-test:
+    <<: *defaults
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm test
+  publish:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+
+workflows:
+    build-test-publish:
+      jobs:
+        - build-and-test
+        - publish:
+            requires:
+              - build-and-test
+            filters:
+              branches:
+                ignore: /.*/
+              tags:
+                only: /^v.*/
